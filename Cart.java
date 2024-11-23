@@ -14,7 +14,15 @@ public class Cart {
             System.out.println("Giỏ hàng gần đầy.");
         }
     }
-
+	 public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+		 for(DigitalVideoDisc dvd : dvdList) {
+			 this.addDigitalVideoDisc(dvd);
+		 }
+	}
+	 public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
+		 this.addDigitalVideoDisc(dvd1);
+		 this.addDigitalVideoDisc(dvd2);
+	 }
 	 public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 	        for (int i = 0; i < qtyOrdered; i++) {
 	            if (itemsOrdered[i] == disc) {
@@ -37,6 +45,7 @@ public class Cart {
 	            total += (itemsOrdered[i]).getCost();  
 	        }
 	        return total;
-	    } 
+	    }
+	 
 }
 

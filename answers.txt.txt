@@ -1,0 +1,1 @@
+Java là pass by value, vì mọi thứ được truyền vào phương thức đều là bản sao (dù là giá trị nguyên thủy hay tham chiếu). 

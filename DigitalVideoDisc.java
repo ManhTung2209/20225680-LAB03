@@ -21,8 +21,14 @@ public class DigitalVideoDisc {
 	public int getLength() {
 		return length;
 	}
+	public int getId() {
+		return id;
+	}
 	public float getCost() {
 		return cost;
+	}
+	public void setTitle(String title) {
+		this.title=title;
 	}
 	public DigitalVideoDisc(String title) {
 		super();
@@ -57,8 +63,16 @@ public class DigitalVideoDisc {
 		nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
 	}
-	public void setTitle(String title) {
-		this.title=title;
-	}
 	
+	@Override
+    public String toString() {
+        return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+    }
+
+    public boolean isMatch(String title) {
+        if (this.title == null || title == null) {
+            return false;
+        }
+        return this.title.toLowerCase().contains(title.toLowerCase());
+    }
 }

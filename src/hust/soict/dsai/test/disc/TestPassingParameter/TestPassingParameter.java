@@ -1,3 +1,4 @@
+package hust.soict.dsai.test.disc.TestPassingParameter;
 
 public class TestPassingParameter {
 	
